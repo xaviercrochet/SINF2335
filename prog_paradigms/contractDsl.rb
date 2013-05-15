@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'ruby_parser'
-require 'mySexp.rb'
+require_relative 'mySexp.rb'
 
 class ContractDSL
 
