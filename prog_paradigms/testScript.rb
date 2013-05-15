@@ -2,24 +2,24 @@
 
 
 load "examples/example_1.rb"
-load "contractDsl.rb"
+load "contractDsl_v2.rb"
 load "mySexp.rb"
 
 #require "rubygems"
 #require "ruby_parser"
 
-mySexp = MySexp.new(RubyParser.new.parse(File.read("testChild.rb")))
+#mySexp = MySexp.new(RubyParser.new.parse(File.read("examples/example_1.rb")))
 #p mySexp
 #p mySexp.getClassSexp(:TestChild)
 #p mySexp.getMethodSexp(:TestChild, :parentMethod)
 #p mySexp.getBody(:TestChild, :parentMethod)
 #p mySexp.getFirstStatement(:TestChild, :parentMethod)
-#p mySexp.getLastStatement(:TestChild, :parentMethod)
+#p mySexp.getLastStatement(:Example, :m1)
 #p mySexp.getStatement(:TestChild, :parentMethod, 1)
 
-load "dsl.rb"
+load "dsl_v2.rb"
 
-#mySexp = MySexp.new(RubyParser.new.parse(File.read("mySexp.rb")))
+
 #newSexp = mySexp.getBody(:MySexp, :getBody)
 #p newSexp.class
 #newSexp.each_sexp do |x|
