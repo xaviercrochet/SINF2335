@@ -1,0 +1,11 @@
+Reste à faire: 
+
+- implémenter references (?)
+
+- implémenter callsAfter
+- implémenter callsBefore
+
+- implémenter la gestion des variables d'instances (voir si elle sont définies?)
+- générer des examples de codes et de dsl
+
+-corriger doesSuperSend
