@@ -5,7 +5,7 @@ require 'ruby_parser'
 
 class MySexp < Sexp
     attr_accessor(:sexp)
-
+    #comment
     #returns the sexp corresponding to aClass
     def getClassSexp(aClass)
         self.each_of_type(:class) do |x|
