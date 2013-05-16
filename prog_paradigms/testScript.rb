@@ -4,6 +4,8 @@
 load "examples/example_1.rb"
 load "contractDsl_v2.rb"
 load "mySexp.rb"
+load "examples/example_overrid.rb"
+load "contracts/contract1.rb"
 
 #require "rubygems"
 #require "ruby_parser"
