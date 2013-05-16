@@ -1,11 +1,22 @@
 \section{DSL specification}
+
+The listing \ref{dsl} shows an example of DSL usage to define a contract. It is composed of the following elements:
+\begin{enumerate}
+	\item[-]\verb+contractName "C1"+: define the name of the contract
+	\item[-]\verb+inAClass "ExampleClass"+: defines the liable class in which we want to analyze the structural regularities
+	\item[-]\verb+definedIn "exampleClass.rb"+: defines the source file used by \emph{RubyParser} to obtain the AST of the class
+	\item[-]\verb+forAMethod :m1+: defines the liable method on which we want to analyze the structural regularities
+	\item[-]\verb+inCondition+: this clause allows the definition of application conditions on the contract. If the block passed is evaluated as false the contract is not applicable so no mater if the clauses in \verb+require+ are evaluated as false or true, the contract is respected\footnote{Here \emph{respected} means that the contract is not applicable. So it's not false nor true. Saying that it is respected is just a convention.}. This clause is not mandatory but if it is used, it must be called \emph{before} \verb+require+.
+	\item[-]\verb+require+: this is the main part of the contract. In this case these clauses express the fact that if the method \verb+m1+ is overridden, then it must begin with a \verb+super+ call and the method must call the method \verb+m2+ or \verb+m3+ to respect the contract.
+\end{enumerate}
+
 \lstset{
 	language=Ruby,        % Set your language (you can change the language for each code-block optionally)
 	tabsize=3,
 	basicstyle = \small \ttfamily,
 	basewidth=0.5em
 }
-\begin{lstlisting}[frame=single]  % Start your code-block
+\begin{lstlisting}[frame=single, caption=example of a DSL usage to define a contract, captionpos=b, label=dsl]  % Start your code-block
 
 c1 = ContractDSL.new
 c1.define {
