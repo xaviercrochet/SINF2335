@@ -1,6 +1,7 @@
 c1 = ContractDSL.new
+#Contract fails because there is no self call in m1
 c1.define {
-    contractName "C1"
+    contractName "Contract 0"
     inAClass "ExampleGrandChild"
     definedIn "examples/example_1.rb"
     forAMethod :m1
