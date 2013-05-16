@@ -2,4 +2,4 @@
 report/*.pdf
 report/*.aux
 report/*.log
-report/*.gz
+report/*.synctex.gz
