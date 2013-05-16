@@ -139,7 +139,6 @@ class ContractDSL
                 elsif aType == :while
                     return true
                 else
-                    p "nested"
                     p body.sexp_body.head
                     found = x.sexp_body.head == anExpression  
                 end
@@ -148,8 +147,7 @@ class ContractDSL
                 end
             end
         end
-        
-        p found
+
         return found 
     
     end
