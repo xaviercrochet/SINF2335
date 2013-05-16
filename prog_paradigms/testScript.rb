@@ -5,13 +5,9 @@ load "examples/example_1.rb"
 load "contractDsl_v2.rb"
 load "mySexp.rb"
 
-load "examples/example_disj.rb"
-load "examples/example_overrid.rb"
-load "examples/example_not_calling_puts.rb"
 
-load "contracts/contract1.rb"
-load "contracts/contract2.rb"
-load "contracts/contract3.rb"
+Dir['examples/*.rb'].each {|file| load file}
+Dir['contracts/*.rb'].each {|file| load file}
 
 #require "rubygems"
 #require "ruby_parser"
