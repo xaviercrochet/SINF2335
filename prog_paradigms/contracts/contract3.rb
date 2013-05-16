@@ -1,3 +1,5 @@
+#contract is not respected
+#because m1 is using while loop
 c1 = ContractDSL.new
 c1.define {
 	contractName "Contract 3 1"
@@ -9,7 +11,8 @@ c1.define {
 		neg {calls?(:m2) or while?}
 	}
 }
-
+#contract is not respected
+#because m2 do a recursive call
 c2 = ContractDSL.new
 c2.define {
 	contractName "Contract 3 2"
@@ -21,7 +24,8 @@ c2.define {
 		neg {calls?(:m2) or while?}
 	}
 }
-
+#contrast is respected
+#because neither do m3 use while loop or call himself
 c3 = ContractDSL.new
 c3.define {
 	contractName "Contract 3 3"

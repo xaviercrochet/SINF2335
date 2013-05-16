@@ -4,7 +4,7 @@ class BigExample
 	end
 
 	def m2
-		return true
+		x = 42
+		puts "I'm using puts"
 	end
-
 end

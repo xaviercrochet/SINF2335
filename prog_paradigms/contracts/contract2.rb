@@ -1,3 +1,5 @@
+#contract is not respected
+#because m1 is calling puts.
 c1 = ContractDSL.new
 c1.define {
 	contractName "Contract 2 1"
@@ -9,7 +11,8 @@ c1.define {
 		neg{calls? :puts}
 	}
 }
-
+#contract is respected
+#because m2 is not calling puts
 c2 = ContractDSL.new
 c2.define {
 	contractName "Contract 2 2"
