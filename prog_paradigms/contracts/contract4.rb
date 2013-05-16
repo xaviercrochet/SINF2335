@@ -10,6 +10,7 @@ c.define {
 	}
 
 	require {
-		neg{endsWith{returns? "42"}} or beginsWith{calls? :puts}
+		neg{endsWith{returns? "42"}} or 
+		(beginsWith{calls? :puts} and assigns? :x)
 	}
 }
