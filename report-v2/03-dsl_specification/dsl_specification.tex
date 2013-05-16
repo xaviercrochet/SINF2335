@@ -1,2 +1,26 @@
 \section{DSL specification}
-content
+\lstset{
+	language=Ruby,        % Set your language (you can change the language for each code-block optionally)
+	tabsize=3,
+	basicstyle = \small \ttfamily,
+	basewidth=0.5em
+}
+\begin{lstlisting}[frame=single]  % Start your code-block
+
+c1 = ContractDSL.new
+c1.define {
+    contractName "C1"
+    inAClass "ExampleClass"
+    definedIn "exampleClass.rb"
+    forAMethod :m1
+    
+    inCondition { 
+        isOverriden?
+    }
+    
+    require {
+    	beginsWith{doesSuperSend?} and
+		(calls? :m2 or calls? :m3)
+    }
+}
+\end{lstlisting}

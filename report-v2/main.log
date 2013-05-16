@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.26)  16 MAY 2013 15:40
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.26)  16 MAY 2013 17:08
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -701,9 +701,7 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 LaTeX Warning: Unused global option(s):
     [technote].
 
-(./main.aux (./01-introduction/introduction.aux) (./02-overview/overview.aux)
-(./03-dsl_specification/dsl_specification.aux)
-(./04-improvements/improvements.aux) (./05-conclusion/conclusion.aux))
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -816,64 +814,51 @@ Overfull \hbox (3.61537pt too wide) in paragraph at lines 44--51
 \openout5 = `main.toc'.
 
  [1]
-\openout2 = `01-introduction/introduction.aux'.
+(./01-introduction/introduction.tex) (./02-overview/overview.tex
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 5.
 
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [1
 
-(./01-introduction/introduction.tex) [1
-
-
-]
-\openout2 = `02-overview/overview.aux'.
-
- (./02-overview/overview.tex) [2
-
-
-]
-\openout2 = `03-dsl_specification/dsl_specification.aux'.
-
-
-(./03-dsl_specification/dsl_specification.tex) [3
-
-
-]
-\openout2 = `04-improvements/improvements.aux'.
-
-
-(./04-improvements/improvements.tex) [4
-
-
-]
-\openout2 = `05-conclusion/conclusion.aux'.
-
- (./05-conclusion/conclusion.tex)
-[5
-
-
-] (./main.aux (./01-introduction/introduction.aux)
-(./02-overview/overview.aux) (./03-dsl_specification/dsl_specification.aux)
-(./04-improvements/improvements.aux) (./05-conclusion/conclusion.aux)) ) 
+])
+(./03-dsl_specification/dsl_specification.tex
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2004/09/05 1.3 listings language file
+)
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 22.
+)
+(./04-improvements/improvements.tex [2]) (./05-conclusion/conclusion.tex)
+[3] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 19048 strings out of 493633
- 400128 string characters out of 3143377
- 477421 words of memory out of 3000000
- 21911 multiletter control sequences out of 15000+200000
- 16408 words of font info for 43 fonts, out of 3000000 for 9000
+ 19474 strings out of 493633
+ 404105 string characters out of 3143377
+ 495187 words of memory out of 3000000
+ 22342 multiletter control sequences out of 15000+200000
+ 19263 words of font info for 48 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 56i,9n,74p,564b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/l
-ocal/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/loc
-al/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local
-/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/t
-exlive/2011/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/tex
-live/2011/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texli
-ve/2011/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive
-/2011/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2
-011/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/201
-1/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (7 pages, 468378 bytes).
+ 56i,9n,74p,704b,1184s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/
+cm-super-t1.enc}</usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super
+/sfbx1095.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/s
+fbx1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfb
+x1440.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfbx2
+074.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfcc120
+0.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfcc1440.
+pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pf
+b></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></
+usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on main.pdf (5 pages, 579469 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
