@@ -113,14 +113,13 @@ class ContractDSL
     
     
     def genericCheck(aType, anExpression)
-
         if @singleStatement
              body = @mySexp
          else
              body = @mySexp.getBody(@liableClass.to_sym, @liableMethod)
          end
 
-        found = false; 
+        found = false;
         if body.sexp_type == aType
             if aType == :call
                 found = body.sexp_body[1] == anExpression
@@ -137,6 +136,8 @@ class ContractDSL
             if x.sexp_type == aType
                 if aType == :call
                     found = x.sexp_body[1] == anExpression
+                elsif aType == :while
+                    return true
                 else
                     p "nested"
                     p body.sexp_body.head
@@ -172,6 +173,10 @@ class ContractDSL
         
     def doesSelfSend?()
         return genericCheck(:self, nil)
+    end
+
+    def while?()
+        return genericCheck(:while, nil)
     end
 
     
