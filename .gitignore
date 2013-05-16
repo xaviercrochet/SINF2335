@@ -1,0 +1,4 @@
+*.swp
+report/*.pdf
+report/*.aux
+report/*.log
