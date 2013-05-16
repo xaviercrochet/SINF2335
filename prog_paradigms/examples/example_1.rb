@@ -14,8 +14,11 @@ end
 
 class ExampleGrandChild < ExampleChild
     def m1
-        super
+        super 
         x = 2
+        while x > 2 do
+            p "toto"
+        end
         #self.m2
         puts "like grand son"
     end

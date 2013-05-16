@@ -1,0 +1,72 @@
+\documentclass[11pt,
+			technote,
+			%draft
+			]{article}
+%\renewcommand{\rmdefault}{ptm} %change la police par défaut
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\usepackage[applemac]{inputenc} 
+
+\usepackage{tikz}  %for plotting cute graphs
+\usetikzlibrary{plotmarks}
+\usepackage{tikz} \usepackage{pgfplots}
+
+
+\usepackage{subfig}% for table side by side
+
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}  
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{appendix} %for using appendices
+
+\usepackage{multirow} % for using multirows in table
+%\usepackage[table]{xcolor}  %for using alternate column colors for each row in a table
+
+\usepackage{listings}	%for using code listings
+%\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+
+\usepackage{array,booktabs} %for arrays
+\usepackage{longtable} %for long table on multiple page
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+                       
+                       
+                       
+ %\includeonly{
+%03-introduction/introduction,
+%04-related_work/related_work,
+%05-folding_operations_specifications/folding_operations_specifications,
+%06-prototyping_tool_specifications/prototyping_tool_specifications,
+%07-rendering_prototypes/rendering_prototypes,
+%08-conclusion/conclusion,
+%}
+
+                       
+\begin{document}
+\input{cover/cover}
+%\maketitle
+
+\renewcommand{\thepage}{\Roman{page}} %change the numbering style
+
+
+\tableofcontents
+\clearpage
+\setcounter{page}{1}
+\renewcommand{\thepage}{\arabic{page}} %change the numbering style
+\newpage
+
+
+
+\include{01-introduction/introduction}
+\include{02-overview/overview}
+\include{03-dsl_specification/dsl_specification}
+\include{04-improvements/improvements}
+\include{05-conclusion/conclusion}
+
+
+\end{document}

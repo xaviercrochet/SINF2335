@@ -118,7 +118,6 @@ class ContractDSL
          else
              body = @mySexp.getBody(@liableClass.to_sym, @liableMethod)
          end
-
         found = false;
         if body.sexp_type == aType
             if aType == :call

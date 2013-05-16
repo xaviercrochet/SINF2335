@@ -1,0 +1,146 @@
+
+\begin{table}[htbp]
+  \centering
+
+	\renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{@{} |c|c|c|c|c| @{}}
+	    \hline
+    Instances & Metrics & Random walk & Max value & Randomized maxvalue \\ 
+    \hline
+    \multirow{3}{*}{att48.tsp} & Computation time & 1,13s & 7,99s & 8,64s \\ \cline{2-5}
+    & Best solution & 38049, cycle: 41718 & 35918, cycle: 39492 & 35365, cycle: 39391 \\ \cline{2-5}
+    & Nbr of steps & 0.01 & 8.14 & 54.94 \\ \cline{2-5}
+    \hline
+    \multirow{3}{*}{bayg29.tsp} & Computation time & 0,29s & 1,46s & 1,75s \\ \cline{2-5}
+    & Best solution & 9742, cycle: 11040 & 9165, cycle: 10340 & 9050, cycle:10329 \\ \cline{2-5}
+    & Nbr of steps & 0.01 & 4.72 & 50.75 \\ \cline{2-5}
+    \hline
+    \multirow{3}{*}{bays29.tsp} & Computation time & 0,29s & 1,48s & 1,75s \\ \cline{2-5}
+    & Best solution & 9742, cycle: 11044 & 9165, cycle: 10340 & 9036, cycle: 10320 \\ \cline{2-5}
+    & Nbr of steps & 0.01 & 4.72 & 48.10 \\ \cline{2-5}
+   \hline
+    \multirow{3}{*}{berlin52.tsp} & Computation time & 1,43s & 8,51s & 9,83s \\ \cline{2-5}
+    & Best solution & 8423, cycle: 9373 & 8198, cycle: 8796 & 8178, cycle: 8782 \\ \cline{2-5}
+    & Nbr of steps & 0 & 4.48 & 38.90 \\ \cline{2-5}
+   \hline
+    \multirow{3}{*}{dantzig42.tsp} & Computation time & 0,77s & 4,48s & 5,19s \\ \cline{2-5}
+    & Best solution & 800, cycle: 895 & 746, cycle: 822 & 734, cycle: 824 \\ \cline{2-5}
+    & Nbr of steps & 0 & 8.07 & 52.92\\ \cline{2-5}
+    \hline
+  \end{tabular}
+
+  \caption{Random walk, max value and randomized maxvalue methods on TSP instances}
+  \label{tps_comparison1}
+\end{table}
+
+\newpage
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+\begin{axis}
+    [width=10cm,
+     height=7cm,
+     xlabel={setp number}, 
+     ylabel={distance},
+     legend entries={Maxvalue,Rand. maxvalue},
+     legend style={at={(1,0.65)},anchor=north east}]
+     ]
+\addplot[gray,mark=triangle*,mark size=1.5pt]
+    plot[]    table[x=step,y=value]{appendices/maxvalue_att48_plot_data.txt};
+ \addplot[red,mark=*,mark size=1.5pt]
+    plot[]    table[x=step,y=value]{appendices/randomized_maxvalue_att48_plot_data.txt};
+ \end{axis}
+\end{tikzpicture}
+\caption{maxvalue vs randomized maxvalue for att48.tsp}
+\label{max_vs_random}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+\begin{axis}
+    [width=10cm,
+     height=7cm,
+     xlabel={setp number}, 
+     ylabel={distance},
+     legend entries={Randomwalk,maxvalue, rand. maxvalue},
+     legend style={at={(1,0.65)},anchor=north east}]
+ \addplot[blue,mark=*,mark size=1.5pt]
+    plot[]    table[x=step,y=value]{appendices/randomwalk_att48_plot_data.txt};
+  \addplot[gray,mark=triangle*,mark size=1.5pt]
+    plot[]    table[x=step,y=value]{appendices/maxvalue_att48_plot_data.txt};
+ \addplot[red,mark=*,mark size=1.5pt]
+    plot[]    table[x=step,y=value]{appendices/randomized_maxvalue_att48_plot_data.txt};
+\end{axis}
+\end{tikzpicture}
+\caption{randomwalk for att48.tsp}
+\label{randomwalk}
+\end{figure}
+
+
+
+
+
+\begin{table}[htbp]
+  \centering
+
+  \begin{tabular}{@{} |c|c|c|c|c|c|c| @{}}
+    \hline
+    Instance &Metrics & t\_s & t\_s  & t\_s & t\_s & simul. annealing \\ 
+	&&  (len=3) & (len=5) &  (len=10) &  (len=20) &\\
+    \hline
+    \multirow{3}{*}{att48.tsp} & Comp. time (sec) & 9.19 & 9.17 & 9.18 & 9.21 & 1.26 \\ \cline{2-7}
+    & Best solution & 38737 & 38765 & 38735 & 38874 & 41582 \\ \cline{2-7}
+    & Nbr of steps & 54.12 & 62 & 67.95 & 55.39 & 0.64 \\ \cline{2-7}
+    \hline
+
+    \multirow{3}{*}{bayg29.tsp} & Comp. time (sec) & 1.96 & 1.98 & 1.95 & 1.96 & 0.34 \\ \cline{2-7}
+    & Best solution & 9991 & 10045 & 9975 & 9943 & 10883 \\ \cline{2-7}
+    & Nbr of steps & 64.55 & 71.37 & 54.31 & 72.79 & 1.72 \\ \cline{2-7}
+    \hline	
+    
+    \multirow{3}{*}{bays29.tsp} & Comp. time (sec) & 1.95 & 1.96 & 1.95 & 1.97 & 0.33 \\ \cline{2-7}
+    & Best solution & 10079 & 10107 & 10036 & 9960 & 10912 \\ \cline{2-7}
+    & Nbr of steps & 61.93 & 55.65 & 56.93 & 66.55 & 1.37 \\ \cline{2-7}
+    \hline
+    
+     \multirow{3}{*}{berlin52.tsp} & Comp. time (sec) & 10.47 & 10.38 & 10.36 & 10.42 & 1.57 \\ \cline{2-7}
+    & Best solution & 8728 & 8702 & 8717 & 8692 & 9320 \\ \cline{2-7}
+    & Nbr of steps & 46.25 & 49.82 & 53.40 & 68.94 & 0.59 \\ \cline{2-7}
+    \hline	
+     
+      \multirow{3}{*}{dantzig.tsp} & Comp. time (sec) & 5.64 & 5.71 & 5.62 & 5.63 & 0.91 \\ \cline{2-7}
+    & Best solution & 807 & 812 & 810 & 814 & 892 \\ \cline{2-7}
+    & Nbr of steps & 63.71 & 64.69 & 62.71 & 61.32 & 1.02 \\ \cline{2-7}
+    \hline		
+ 
+  \end{tabular}
+  
+  \label{tabu}
+    \caption{tabu search (t\_s) and simulated annealing method on different TSP instances}
+\end{table}
+
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+\begin{axis}
+    [width=10cm,
+     height=7cm,
+     xlabel={setp number}, 
+     ylabel={distance},
+     legend entries={Sim. Annealing,Tabu search},
+     legend style={at={(1,0.65)},anchor=north east}]
+     ]
+\addplot[gray,mark=triangle*,mark size=1.5pt]
+    plot[]    table[x=step,y=value]{appendices/cycle_simulated_annealing_att48_plot_data.txt};
+ \addplot[red,mark=*,mark size=1.5pt]
+    plot[]    table[x=step,y=value]{appendices/cycle_tabu_search_10_att48_plot_data.txt};
+ \end{axis}
+\end{tikzpicture}
+\caption{simulated annealing vs tabu search for att48.tsp}
+\label{simul_vs_tabu}
+\end{figure}
+
+
