@@ -4,4 +4,5 @@
 \contentsline {subsection}{\numberline {2.2}Reflexivity}{1}
 \contentsline {subsection}{\numberline {2.3}The parser}{2}
 \contentsline {section}{\numberline {3}DSL specification}{2}
-\contentsline {section}{\numberline {4}Conclusion}{2}
+\contentsline {section}{\numberline {4}Improvements}{2}
+\contentsline {section}{\numberline {5}Conclusion}{3}
